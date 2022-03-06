@@ -1,0 +1,11 @@
+.App{
+    @apply bg-input-300 px-0 md:px-6 py-4 font-primary flex flex-col justify-center items-center lg:h-fullv md:w-screen;
+}
+.App-h3{
+    @apply text-input-100 font-bold tracking-widest text-xl;
+
+}
+
+.App-h3 p{
+    letter-spacing: 15px;
+}

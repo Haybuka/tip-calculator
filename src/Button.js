@@ -21,7 +21,7 @@ function handleSubmit(e){
   return (
     typeof tip === 'number' ? 
     (  <p className={typeof tip === 'number'  && 'btns btn'} onClick={handleClick}> {tip}%</p>) :
-    (<form className='cursor-pointer flex justify-center md:inline-block' onSubmit={handleSubmit}>
+    (<form className='w-2/5 md:w-auto cursor-pointer flex justify-center md:inline-block' onSubmit={handleSubmit}>
        {input ? ( <p className='btn-custom btn' onClick={e=> setInput(!input)}>{tip}</p>) : 
        (
        <input value={custom} onChange={e=> setCustom(e.target.value)} type='text' placeholder={tip} className='custom' />

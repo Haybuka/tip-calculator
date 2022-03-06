@@ -3,30 +3,35 @@ import Selection from "./Selection";
 import Bill from "./Bill";
 import People from "./People";
 import Tipamount from "./Tipamount";
-import './App.css'
+import './Tip.css'
 function Tip() {
   const [bill,setBill] = useState(0)
   const [tip,setTip] = useState(5)
   const [people,setPeople] = useState(1)
-   const [calTip,setCalTip] = useState()
+  const [calTip,setCalTip] = useState()
 
    function calculate(tip){
       if(bill > 0){
         setTip(tip)
         setCalTip((tip/100 * bill));
       }
-
+  }
+  function reset(){
+    setBill(0)
+    setTip(5)
+    setPeople(1)
+    setCalTip()
   }
   return (
-    <main className="bg-white px-4 py-8 w-10/12 rounded-lg my-10 lg:grid grid-cols-2 justify-between items-start">
-       <section className="">
+    <main>
+       <aside>
          <Bill bill={bill} setBill={setBill} />
          <Selection tip={tip} setTip={setTip} calculate={calculate}/>
          <People people={people} setPeople={setPeople}/>
-       </section>
-       <section className="bg-dark p-6 text-white mt-12 lg:mt-0 rounded lg:mx-4">
-         <Tipamount amount={calTip} person={people}/>
-       </section>
+       </aside>
+       <aside className="display">
+         <Tipamount amount={calTip} person={people} reset={reset}/>
+       </aside>
     </main>
   );
 }

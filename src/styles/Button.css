@@ -1,0 +1,13 @@
+.btns{
+    @apply bg-dark w-2/5 text-white font-bold cursor-pointer md:py-2 md:px-16 md:w-auto hover:bg-reset hover:text-dark  md:inline-block;
+}
+.btn-custom{
+    @apply capitalize text-dark bg-gray-100 w-2/5 md:px-16 md:py-2 md:w-24;
+}
+.custom{
+    @apply outline-none border-2 border-dark w-4/5 max-h-12  rounded focus:border-2 py-2 px-2 text-center inline-block text-sm;
+
+}
+.btn{
+    @apply flex justify-center items-center py-2 px-20 rounded my-2 mr-2 ;
+}

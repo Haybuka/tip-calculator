@@ -1,5 +1,4 @@
 import Tip from './Tip';
-import { TipProvider } from './context/Tipcontext';
 import './App.css'
 
 function App() {
@@ -9,9 +8,7 @@ function App() {
         <p className='tracking-widest'>SPLI</p>
         <p className='tracking-widest'>TTER</p>
       </h3>
-      <TipProvider>
-         <Tip />
-      </TipProvider>
+      <Tip />
    </div>
   );
 }
